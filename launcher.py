@@ -18,8 +18,10 @@ while True:
     if any(x in cmd.upper() for x in varsDL):
 
         coor = cmd.split(' ')
-        
-        root.drawLine((coor[1], coor[2]))
+        try:
+            root.drawLine((coor[1], coor[2]))
+        except:
+            root.drawLine()
 
 
     varsTR = ('TRIANGULATE', 'CONNECT3', 'TR', 'TRIANGLE', )
